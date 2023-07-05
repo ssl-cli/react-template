@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-N1 text-t7;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+html {
+  font-size: calc(100vw / 10) !important;
+}
+@layer components {
+  .sd-field-split-line {
+    @apply bg-W;
+
+    &:after {
+      content: " ";
+      @apply block border-b border-N3 scale-y-50;
+    }
+  }
+  .sd-layout {
+    @apply px-6;
+  }
+
+  .sd-card {
+    @apply rounded-4x overflow-hidden;
+  }
+
+  .sd-field-desc {
+    @apply pl-8 text-t3 text-N6;
+
+    &--top {
+      @apply pt-6 pb-4;
+    }
+    &--bottom {
+      @apply pt-4 pb-6;
+    }
+
+    &__text {
+      @apply inline-block;
+    }
+
+    &__link {
+      @apply inline-block ml-4 text-TC active:text-TC focus:text-TC hover:text-TC text-t3;
+    }
+  }
+}
